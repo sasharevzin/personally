@@ -1,0 +1,10 @@
+user: first, last, email, custom_url, bio, phone, address, template twitter_url
+projects: title, description, url, picture
+skills: category, title, description, percentage
+social links: kind, url
+
+rails g scaffold user first_name last_name email custom_url, bio:text address template_id:integer twitter_url linkedin_url github_url
+rails g scaffold project title description:text url picture:attachment project_order:decimal user:belongs_to
+rails g scaffold skill category title description:text percentage:integer user:belongs_to
+rails g scaffold contact name email body:text user:belongs_to
+

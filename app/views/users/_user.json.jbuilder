@@ -1,0 +1,2 @@
+json.extract! user, :id, :first_name, :last_name, :email, :custom_url,, :bio, :address, :template_id, :twitter_url, :linkedin_url, :github_url, :created_at, :updated_at
+json.url user_url(user, format: :json)
