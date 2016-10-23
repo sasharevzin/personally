@@ -10,6 +10,40 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
  */
+
+body{
+  background: #4bc3a7;
+  font-size: 14px;
+  font-family: Arial;
+}
+
+.container{
+  overflow: hidden;
+  width: 980px;
+  margin: auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.wizard{
+
+}
+
+form{
+  input, select, textarea{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .btn{
+    background: #4bc3a7;
+    color: #fff;
+  }
+  .field{
+    padding-bottom: 10px;
+  }
+}

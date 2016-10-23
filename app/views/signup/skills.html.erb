@@ -1,2 +1,12 @@
-<h1>Signup#skills</h1>
-<p>Find me in app/views/signup/skills.html.erb</p>
+<h1>What do you love?</h1>
+<%= form_tag do %>
+  <div class="field">
+    <% User::SKILLS.each do |skill| %>
+      <label>
+        <%= check_box_tag('user[skills][]', skill) %>
+        <%= skill %>
+      </label>
+    <% end %>
+  </div>
+  <%= submit_tag 'Continue', class: 'btn' %>
+<% end %>

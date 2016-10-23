@@ -1,2 +1,8 @@
-<h1>Signup#photo</h1>
-<p>Find me in app/views/signup/photo.html.erb</p>
+<h1>Add a photo of yourself</h1>
+<%= form_tag signup_path('photo'), multipart: true do %>
+  <div class="field">
+    <%= file_field_tag('user[photo]') %>
+  </div>
+  <%= submit_tag 'Continue', class: 'btn' %>
+<% end %>
+

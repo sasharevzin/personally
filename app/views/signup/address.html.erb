@@ -1,0 +1,7 @@
+<h1>Where do you live, <%= @user.first_name %>?</h1>
+<%= form_tag do %>
+  <div class="field">
+    <%= text_field_tag('user[address]') %>
+  </div>
+  <%= submit_tag 'Continue', class: 'btn' %>
+<% end %>

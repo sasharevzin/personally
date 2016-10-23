@@ -1,4 +1,13 @@
 <h1>Type email</h1>
 <%= form_tag do %>
-  <%= email_field_tag(:user, :email) %>
+  <div class="field">
+    <%= email_field_tag('user[email]', '', placeholder: 'Email', required: true) %>
+  </div>
+  <div class="field">
+    <%= password_field_tag('user[password]', '', placeholder: 'Password', required: true) %>
+  </div>
+  <div class="field">
+    <%= password_field_tag('user[password_confirmation]', '', placeholder: 'Password confirmation', required: true) %>
+  </div>
+  <%= submit_tag 'Continue', class: 'btn' %>
 <% end %>

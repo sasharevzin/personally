@@ -1,2 +1,10 @@
-<h1>Signup#name</h1>
-<p>Find me in app/views/signup/name.html.erb</p>
+<h1>What’s your name?</h1>
+<%= form_tag do %>
+  <div class="field">
+    <%= text_field_tag('user[first_name]', '', placeholder: 'First name', required: true) %>
+  </div>
+  <div class="field">
+    <%= text_field_tag('user[last_name]', '', placeholder: 'Last name', required: true) %>
+  </div>
+  <%= submit_tag 'Continue', class: 'btn' %>
+<% end %>

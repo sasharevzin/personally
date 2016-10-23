@@ -1,2 +1,7 @@
-<h1>Signup#template</h1>
-<p>Find me in app/views/signup/template.html.erb</p>
+<h1>Choose your design</h1>
+<%= form_tag do %>
+  <div class="field">
+    <%= select_tag 'user[template_id]', options_from_collection_for_select(User::TEMPLATES, :first, :last) %>
+  </div>
+  <%= submit_tag 'Continue', class: 'btn' %>
+<% end %>
