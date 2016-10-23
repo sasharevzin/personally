@@ -1,3 +1,4 @@
-<h1>Signup#email</h1>
-<p>Find me in app/views/signup/email.html.erb</p>
-<%= link_to 'location', signup_path('location') %>
+<h1>Type email</h1>
+<%= form_tag do %>
+  <%= email_field_tag(:user, :email) %>
+<% end %>
